@@ -1,4 +1,4 @@
-# smart-home-android
+# Stefans Smart Home Android App
 
 **PROTOYPE**
 
@@ -6,9 +6,7 @@
 
 This is a private project to play around and learn Jetpack Compose.
 
-The app can be used with my [smart home project](https://github.com/StefanOltmann/StefansSmartHome) infrastructure.
-
-It has a lot of bugs, hacks and not many features. But it works.
+The app can be used with my [smart home project](https://github.com/StefanOltmann/smart-home-server) infrastructure.
 
 ## Screenshots
 
