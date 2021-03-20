@@ -5,11 +5,11 @@ buildscript {
         // --- Framework versions ---
 
         // Kotlin with Coroutines
-        kotlinVersion = '1.4.21'
+        kotlinVersion = '1.4.31'
         coroutinesVersion = '1.4.2'
 
         // Android with Jetpack Compose
-        androidGradlePluginVersion = '7.0.0-alpha04'
+        androidGradlePluginVersion = '7.0.0-alpha10'
         composeVersion = '1.0.0-alpha10'
         composeNavigationVersion = '1.0.0-alpha05'
 
