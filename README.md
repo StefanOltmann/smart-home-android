@@ -2,6 +2,8 @@
 
 **PROTOYPE**
 
+[![CI](https://github.com/StefanOltmann/smart-home-android/actions/workflows/ci.yml/badge.svg)](https://github.com/StefanOltmann/smart-home-android/actions/workflows/ci.yml)
+
 ## About
 
 This is a private project to play around and learn Jetpack Compose.
