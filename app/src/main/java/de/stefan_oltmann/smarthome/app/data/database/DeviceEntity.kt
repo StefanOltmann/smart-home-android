@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "devices")
 data class DeviceEntity(
-        @PrimaryKey
-        val id: String,
-        val name: String,
-        val type: String
+    @PrimaryKey
+    val id: String,
+    val name: String,
+    val type: String
 )
