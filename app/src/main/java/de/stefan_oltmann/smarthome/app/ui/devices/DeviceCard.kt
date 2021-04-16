@@ -34,6 +34,9 @@ import de.stefan_oltmann.smarthome.app.ui.theme.SmartHomeAppTheme
 import de.stefan_oltmann.smarthome.app.ui.theme.black
 import de.stefan_oltmann.smarthome.app.ui.theme.white
 
+private const val HALF = 50
+private const val PERCENT_STEP = 10
+
 @Composable
 fun PowerStateDeviceCard(
     name: String,
@@ -77,7 +80,7 @@ fun PercentageDeviceCard(
 
     val imageVector: ImageVector = if (type == DeviceType.ROLLER_SHUTTER) {
 
-        if (percentage.value > 50)
+        if (percentage.value > HALF)
             vectorResource(R.drawable.ic_window_shutter)
         else
             vectorResource(R.drawable.ic_window_shutter_open)
@@ -100,7 +103,7 @@ fun PercentageDeviceCard(
 
             FloatingActionButton(
                 onClick = {
-                    onPercentageChanged((percentage.value + 10).coerceAtMost(100))
+                    onPercentageChanged((percentage.value + PERCENT_STEP).coerceAtMost(100))
                 },
                 modifier = Modifier.preferredSize(24.dp),
                 backgroundColor = white
@@ -119,7 +122,7 @@ fun PercentageDeviceCard(
 
             FloatingActionButton(
                 onClick = {
-                    onPercentageChanged((percentage.value - 10).coerceAtLeast(0))
+                    onPercentageChanged((percentage.value - PERCENT_STEP).coerceAtLeast(0))
                 },
                 modifier = Modifier.preferredSize(24.dp),
                 backgroundColor = white

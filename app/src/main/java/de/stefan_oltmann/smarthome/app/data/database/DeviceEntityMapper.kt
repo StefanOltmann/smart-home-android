@@ -8,11 +8,11 @@ object DeviceEntityMapper {
 
     fun toDomainModel(deviceEntities: List<DeviceEntity>): List<Device> {
 
-        return deviceEntities.map { deviceEntity ->
+        return deviceEntities.map { (id, name, type) ->
             Device(
-                id = DeviceId(deviceEntity.id),
-                name = deviceEntity.name,
-                type = DeviceType.valueOf(deviceEntity.type)
+                id = DeviceId(id),
+                name = name,
+                type = DeviceType.valueOf(type)
             )
         }
     }

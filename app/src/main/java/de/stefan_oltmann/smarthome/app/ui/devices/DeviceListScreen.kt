@@ -29,29 +29,27 @@ fun DeviceListScreen(
 
             LazyColumn {
 
-                items(devices) { device ->
+                items(devices) { (id, name, type) ->
 
-                    if (device.type == DeviceType.LIGHT_SWITCH) {
+                    if (type == DeviceType.LIGHT_SWITCH) {
 
                         PowerStateDeviceCard(
-                            name = device.name,
-                            powerState = viewModel.getDevicePowerState(device.id),
+                            name = name,
+                            powerState = viewModel.getDevicePowerState(id),
                             onPowerStateChanged = { powerState ->
-                                viewModel.onDevicePowerStateChanged(device.id, powerState)
+                                viewModel.onDevicePowerStateChanged(id, powerState)
                             }
                         )
                     }
 
-                    if (device.type == DeviceType.DIMMER
-                        || device.type == DeviceType.ROLLER_SHUTTER
-                    ) {
+                    if (type == DeviceType.DIMMER || type == DeviceType.ROLLER_SHUTTER) {
 
                         PercentageDeviceCard(
-                            name = device.name,
-                            percentage = viewModel.getDevicePercentage(device.id),
-                            type = device.type,
+                            name = name,
+                            percentage = viewModel.getDevicePercentage(id),
+                            type = type,
                             onPercentageChanged = { percentage ->
-                                viewModel.onDevicePercentageChanged(device.id, percentage)
+                                viewModel.onDevicePercentageChanged(id, percentage)
                             }
                         )
                     }

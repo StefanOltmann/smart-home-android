@@ -91,10 +91,6 @@ object RestApiClientFactory {
      */
     private class AuthCodeHeaderInterceptor(private val authCode: String) : Interceptor {
 
-        companion object {
-            const val HEADER_KEY_AUTH_CODE = "AUTH_CODE"
-        }
-
         override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
 
             val originalRequest = chain.request()
@@ -105,6 +101,10 @@ object RestApiClientFactory {
                 .build()
 
             return chain.proceed(modifiedRequest)
+        }
+
+        companion object {
+            const val HEADER_KEY_AUTH_CODE = "AUTH_CODE"
         }
     }
 }

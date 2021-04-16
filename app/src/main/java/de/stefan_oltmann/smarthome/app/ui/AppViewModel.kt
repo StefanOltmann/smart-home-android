@@ -87,13 +87,11 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         return devicePercentage
     }
 
-    fun getDevicePowerState(deviceId: DeviceId): MutableState<DevicePowerState> {
-        return getOrCreateDevicePowerState(deviceId)
-    }
+    fun getDevicePowerState(deviceId: DeviceId) =
+        getOrCreateDevicePowerState(deviceId)
 
-    fun getDevicePercentage(deviceId: DeviceId): MutableState<Int> {
-        return getOrCreateDevicePercentage(deviceId)
-    }
+    fun getDevicePercentage(deviceId: DeviceId) =
+        getOrCreateDevicePercentage(deviceId)
 
     fun onDevicePowerStateChanged(deviceId: DeviceId, powerState: DevicePowerState) {
 
@@ -154,7 +152,7 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
 
         deviceRepository.restApi = createRestApi()
 
-        refreshDevices() {
+        refreshDevices {
 
             onSuccess()
 

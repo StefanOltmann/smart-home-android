@@ -20,7 +20,6 @@ fun SmartHomeApp(
 
     val navController = rememberNavController()
 
-
     Scaffold(
         topBar = {
             TopAppBar(
@@ -29,7 +28,7 @@ fun SmartHomeApp(
         }
     ) {
 
-        //val navigateToDeviceListForGroup = { _: String -> navController.navigate("deviceList") }
+        // val navigateToDeviceListForGroup = { _: String -> navController.navigate("deviceList") }
 
         val navigateToDeviceList = { navController.navigate("deviceList") }
 
@@ -40,7 +39,7 @@ fun SmartHomeApp(
                 /*
                  * Try the provided credentials first
                  */
-                viewModel.tryLogin() {
+                viewModel.tryLogin {
 
                     /*
                      * If credentials are valid and the

@@ -50,13 +50,15 @@ class MainActivity : AppCompatActivity() {
          * FIXME HACK: Since LiveData-to-State-transformation with
          * observeAsState() is currently broken we do it manually.
          */
-        appViewModel.deviceLiveData.observe(this, { devices ->
-            appViewModel.devicesMutableState.value = devices
-        })
+        appViewModel.deviceLiveData.observe(
+            this,
+            { devices -> appViewModel.devicesMutableState.value = devices }
+        )
 
-        appViewModel.deviceStatesLiveData.observe(this, {
-            appViewModel.onDeviceStatesUpdated()
-        })
+        appViewModel.deviceStatesLiveData.observe(
+            this,
+            { appViewModel.onDeviceStatesUpdated() }
+        )
 
         dataStore = createDataStore(name = "settings")
 
@@ -120,13 +122,14 @@ class MainActivity : AppCompatActivity() {
      */
     private fun doTheAutoRefresh() {
 
-        handler.postDelayed({
+        handler.postDelayed(
+            {
+                appViewModel.refreshDeviceStates()
 
-            appViewModel.refreshDeviceStates()
-
-            if (autorefresh)
-                doTheAutoRefresh()
-
-        }, 3000)
+                if (autorefresh)
+                    doTheAutoRefresh()
+            },
+            3000
+        )
     }
 }

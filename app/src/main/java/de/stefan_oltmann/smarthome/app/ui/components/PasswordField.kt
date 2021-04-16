@@ -22,10 +22,10 @@ fun PasswordField(
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
-    label: @Composable() (() -> Unit)? = null,
+    label: @Composable (() -> Unit)? = null,
 ) {
 
-    var passwordVisible = remember { mutableStateOf(false) }
+    val passwordVisible = remember { mutableStateOf(false) }
 
     TextField(
         value = value,
