@@ -80,9 +80,8 @@ object RestApiClientFactory {
             /* No exception -> Server is trusted. */
         }
 
-        override fun getAcceptedIssuers(): Array<X509Certificate> {
-            return emptyArray()
-        }
+        override fun getAcceptedIssuers(): Array<X509Certificate> = emptyArray()
+
     }
 
     /**

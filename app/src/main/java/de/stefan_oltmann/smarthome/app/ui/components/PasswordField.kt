@@ -36,9 +36,9 @@ fun PasswordField(
         leadingIcon = { Icon(Icons.Filled.Lock) },
         visualTransformation = if (passwordVisible.value) VisualTransformation.None else PasswordVisualTransformation(),
         trailingIcon = {
-            IconButton(onClick = {
-                passwordVisible.value = !passwordVisible.value
-            }) {
+            IconButton(
+                onClick = { passwordVisible.value = !passwordVisible.value }
+            ) {
                 if (passwordVisible.value)
                     Icon(imageVector = vectorResource(R.drawable.ic_visibility_off))
                 else
