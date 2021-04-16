@@ -3,6 +3,7 @@
 **PROTOYPE**
 
 [![CI](https://github.com/StefanOltmann/smart-home-android/actions/workflows/ci.yml/badge.svg)](https://github.com/StefanOltmann/smart-home-android/actions/workflows/ci.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/stefanoltmann/smart-home-android/badge)](https://www.codefactor.io/repository/github/stefanoltmann/smart-home-android)
 
 ## About
 
