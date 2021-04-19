@@ -5,7 +5,7 @@ buildscript {
         // --- Framework versions ---
 
         // Kotlin with Coroutines
-        kotlinVersion = '1.4.21'
+        kotlinVersion = '1.4.32'
         coroutinesVersion = '1.4.2'
 
         // Android with Jetpack Compose
