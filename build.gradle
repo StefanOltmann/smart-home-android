@@ -10,7 +10,7 @@ buildscript {
 
         // Android with Jetpack Compose
         androidGradlePluginVersion = '7.0.0-alpha10'
-        composeVersion = '1.0.0-alpha10'
+        composeVersion = '1.0.0-beta05'
         composeNavigationVersion = '1.0.0-alpha05'
 
         // Android Jetpack Libs
