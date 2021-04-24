@@ -113,7 +113,7 @@ dependencies {
     implementation "androidx.datastore:datastore-preferences:1.0.0-beta01"
 
     // Lifecycle
-    def lifecycleVersion = "2.2.0"
+    def lifecycleVersion = "2.3.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
@@ -127,7 +127,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$roomVersion"
 
     // Unit Tests
-    testImplementation "junit:junit:4.13.1"
+    testImplementation "junit:junit:4.13.2"
     androidTestImplementation "androidx.test.ext:junit:1.1.2"
     androidTestImplementation "androidx.test.espresso:espresso-core:3.3.0"
 }
