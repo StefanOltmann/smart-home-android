@@ -15,12 +15,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Prepare Secret Files
-        run: |
-          echo "${{ secrets.KEYSTORE }}" > keystore.jks.asc
-          gpg -d --passphrase "${{ secrets.KEYSTORE_PASSPHRASE }}" --batch keystore.jks.asc > app/keystore.jks
-          echo "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore.properties.asc
-          gpg -d --passphrase "${{ secrets.KEYSTORE_PASSPHRASE }}" --batch keystore.properties.asc > keystore.properties
       - name: Build with Gradle
         run: |
           chmod +x gradlew

@@ -6,12 +6,6 @@ plugins {
     id "org.sonarqube" version "$sonarqubeVersion"
 }
 
-def keystoreProperties = new Properties()
-keystoreProperties['storeFile'] = "keystore.jks"
-def keystorePropertiesFile = rootProject.file("keystore.properties");
-if (keystorePropertiesFile.exists())
-    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -27,19 +21,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        release {
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            v2SigningEnabled true
-        }
-    }
-
     buildTypes {
         release {
-            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
