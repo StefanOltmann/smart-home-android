@@ -12,7 +12,7 @@ buildscript {
         coroutinesVersion = '1.4.2'
 
         // Android with Jetpack Compose
-        androidGradlePluginVersion = '7.0.0-alpha14'
+        androidGradlePluginVersion = '7.1.0-alpha07'
         composeVersion = '1.0.0-alpha10'
         composeNavigationVersion = '1.0.0-alpha05'
 
