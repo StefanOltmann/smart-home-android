@@ -5,7 +5,7 @@ buildscript {
         // --- Framework versions ---
 
         detektVersion = '1.17.1'
-        sonarqubeVersion = '3.2.0'
+        sonarqubeVersion = '3.4.0.2513'
 
         // Kotlin with Coroutines
         kotlinVersion = '1.4.21'
